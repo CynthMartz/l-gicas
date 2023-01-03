@@ -18,10 +18,25 @@
     pincel.fillRect(0, 0, 600, 400);
 
     function exhibirAlerta(evento){
+        var x = evento.pageX - pantalla.offsetLeft; // para contar la pantalla canvas
+        var y = evento.pageY - pantalla.offsetTop;
         console.log(evento);
-        alert("Usted hizo un click");
+        alert(x + "," + y);
     }
-    pantalla.onclick= exhibirAlerta;
+
+    function dibujarCirculo(evento){
+        var x = evento.pageX - pantalla.offsetLeft; // para contar la pantalla canvas
+        var y = evento.pageY - pantalla.offsetTop;
+        
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.14)
+        pincel.fill(); //para que aparezca el pincel
+        
+        console.log(x + "," + y);
+    }
+    pantalla.onclick= dibujarCirculo;
+   // pantalla.onclick= exhibirAlerta;
 
 </script>
 </body>
