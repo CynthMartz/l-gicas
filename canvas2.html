@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="1000" height="1000"></canvas>
+
+    
+    <script>
+//Primer ejemplo de semaforo
+    function dibujarCuadradoRojo(x,y){
+        var pantalla=document.querySelector("canvas");
+        var pincel= pantalla.getContext("2d");
+    
+        pincel.fillStyle="red"; //propiedad
+        pincel.fillRect(x,y,50,50); //función
+        pincel.strokeStyle="black"; //definir bordes
+        pincel.strokeRect(x,y,50,50);
+    }
+
+    function dibujarCuadradoAmarillo(x,y){
+        var pantalla=document.querySelector("canvas");
+        var pincel= pantalla.getContext("2d");
+    
+        pincel.fillStyle="yellow"; //propiedad
+        pincel.fillRect(x,y,50,50); //función
+        pincel.strokeStyle="black"; //definir bordes
+        pincel.strokeRect(x,y,50,50);
+    }
+
+    function dibujarCuadradoVerde(x,y){
+        var pantalla=document.querySelector("canvas");
+        var pincel= pantalla.getContext("2d");
+    
+        pincel.fillStyle="green"; //propiedad
+        pincel.fillRect(x,y,50,50); //función
+        pincel.strokeStyle="black"; //definir bordes
+        pincel.strokeRect(x,y,50,50);
+    }
+
+    dibujarCuadradoRojo(0,0);
+    dibujarCuadradoAmarillo(0,50);
+    dibujarCuadradoVerde(0,100);
+
+    //Segundo ejemplo de Semafoto
+    function dibujarCuadrado(x,y,color){
+        var pantalla=document.querySelector("canvas");
+        var pincel= pantalla.getContext("2d");
+    
+        pincel.fillStyle= color; //propiedad
+        pincel.fillRect(x,y,50,50); //función
+        pincel.strokeStyle="black"; //definir bordes
+        pincel.strokeRect(x,y,50,50);
+    }
+    dibujarCuadrado(100,0,"red");
+    dibujarCuadrado(100,50,"yellow");
+    dibujarCuadrado(100,100,"green");
+
+    //iteraciones
+    
+    var x =0;
+    while(x < 600){
+        dibujarCuadrado(x,200,"violet");
+        dibujarCuadrado(x,250,"yellow");
+        dibujarCuadrado(x,300,"pink");
+        x= x+50;
+    }
+
+    for(var x=0; x < 600; x = x + 50){
+    dibujarCuadrado(x,400,"#8289D5");
+    dibujarCuadrado(x,450,"#D47EB0");
+    dibujarCuadrado(x,500,"#88D2D7");
+}   
+</script>
+    
+</body>
+</html>
