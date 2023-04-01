@@ -8,7 +8,16 @@
 .headerPrincipal-nav{
     display: flex;
 }
+/*Cursos*/
+.contenidoPrincipal-cursos{
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.contenidoPrincipal-cursos-link{
+    display: flex;
+    width: 23%;
+}
 
 /*Footer*/
 .rodapePrincipal-patrocinadores .container{
