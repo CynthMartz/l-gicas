@@ -22,7 +22,8 @@
 }
 
 .destacados__panel-imagen{
-    width: 100vw;
+    width: 100vw; /* en caso de poner medidas absolutas la imagen estará más chica y pixwlada*/
+    max-width: 600px;/*con este no queda la imagen pixelada en tamaño grandes*/
     box-shadow: 0 2px 10px 5px #00000020;
     margin-bottom: .5rem;
 }
