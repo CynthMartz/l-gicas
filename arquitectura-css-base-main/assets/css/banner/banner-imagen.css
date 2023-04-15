@@ -1,8 +1,20 @@
 .banner__imagen{
-    background: url(./assets/img/banner.png) no-repeat center / cover;
+    background: url('../arquitectura-css-base-main/assets/img/banner.png') no-repeat center / cover;
     /*background-repeat: no-repeat;
     background-size: cover;
     background-position: center;*/
     width: 100%;
-    height: calc(100vh- 72px) 100vh;
+}
+
+@media screen and (min-width: 0) {
+    .banner__imagen{
+        height: calc(100vh - 51px) 100vh;
+
+    }
+}
+
+@media screen and (min-width:768px) {
+    .banner__imagen{
+        height: calc(100vh - 72px) 100vh;
+    }
 }
